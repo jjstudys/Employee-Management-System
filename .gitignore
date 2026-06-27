@@ -1,10 +1,16 @@
+# Dependencies
 node_modules/
+
+# Environment files
+.env
+
+# Build files
 dist/
 build/
-.env
-.env.local
+
+# Logs
+logs/
 *.log
+
+# OS files
 .DS_Store
-uploads/
-coverage/
-.vite/

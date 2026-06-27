@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Employee Management System
 
 A full-stack Employee Management System built with **Node.js**, **Express**, **MongoDB**, **React**, **JWT Authentication**, **Socket.io**, and optional **Redis**.
@@ -153,3 +154,7 @@ See `backend/.env.example` for all configuration options including:
 ## License
 
 MIT
+=======
+# EMS
+Employee Management System
+>>>>>>> c62031234826a9940763318c9caf95c442b6439c
