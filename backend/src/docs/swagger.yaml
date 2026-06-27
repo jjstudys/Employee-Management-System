@@ -1,0 +1,44 @@
+paths:
+  /api/v1/employees:
+    get:
+      tags: [Employees]
+      summary: List employees with pagination, filtering, sorting, search
+      parameters:
+        - { name: page, in: query, schema: { type: integer } }
+        - { name: limit, in: query, schema: { type: integer } }
+        - { name: search, in: query, schema: { type: string } }
+        - { name: status, in: query, schema: { type: string } }
+        - { name: department, in: query, schema: { type: string } }
+        - { name: sortBy, in: query, schema: { type: string } }
+        - { name: order, in: query, schema: { type: string, enum: [asc, desc] } }
+      responses:
+        '200':
+          description: Paginated employee list
+
+  /api/v1/dashboard/analytics:
+    get:
+      tags: [Dashboard]
+      summary: Admin/HR dashboard analytics
+      responses:
+        '200':
+          description: Analytics data including employee counts, leave stats, payroll summary
+
+  /api/v1/leaves:
+    get:
+      tags: [Leaves]
+      summary: List leave requests
+      post:
+        tags: [Leaves]
+        summary: Submit leave request
+
+  /api/v1/attendance/check-in:
+    post:
+      tags: [Attendance]
+      summary: Employee check-in with optional GPS location
+
+  /api/v1/reports/employees:
+    get:
+      tags: [Reports]
+      summary: Export employee report
+      parameters:
+        - { name: format, in: query, schema: { type: string, enum: [excel, pdf] } }
